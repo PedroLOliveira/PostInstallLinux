@@ -1,11 +1,8 @@
 #!/usr/bin/env bash
 # ----------------------------- VARIÁVEIS ----------------------------- #
-PPA_LUTRIS="ppa:lutris-team/lutris"
-
 URL_WINE_KEY="https://dl.winehq.org/wine-builds/winehq.key"
 URL_PPA_WINE="https://dl.winehq.org/wine-builds/ubuntu/"
 URL_GOOGLE_CHROME="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
-URL_INSYNC="https://d2t3ff60b2tol4.cloudfront.net/builds/insync_3.0.27.40677-bionic_amd64.deb"
 URL_AZURE_DATA_STUDIO="https://go.microsoft.com/fwlink/?linkid=2113344"
 
 DIRETORIO_DOWNLOADS="$HOME/Downloads/programas"
@@ -30,7 +27,6 @@ PROGRAMAS_PARA_INSTALAR=(
   virtualbox
   flameshot
   steam-installer
-  lutris
   synaptic
   gnome-tweaks
   dconf-editor
@@ -50,8 +46,7 @@ sudo dpkg --add-architecture i386
 ## Atualizando o repositório ##
 sudo apt update -y
 
-## Adicionando repositórios de terceiros e suporte a Snap (Lutris e Wine)##
-sudo add-apt-repository "$PPA_LUTRIS" -y
+## Adicionando repositórios de terceiros e suporte a Snap ##
 wget -nc "$URL_WINE_KEY"
 sudo apt-key add winehq.key
 sudo apt-add-repository "deb $URL_PPA_WINE bionic main"
@@ -63,8 +58,7 @@ sudo apt update -y
 
 ## Download e instalaçao de programas externos ##
 mkdir "$DIRETORIO_DOWNLOADS"
-wget -c "$URL_GOOGLE_CHROME"       -P "$DIRETORIO_DOWNLOADS"
-wget -c "$URL_INSYNC"              -P "$DIRETORIO_DOWNLOADS"
+wget -c "$URL_GOOGLE_CHROME"       -P "$DIRETORIO_DOWNLOADS"]
 wget -c "$URL_AZURE_DATA_STUDIO"              -P "$DIRETORIO_DOWNLOADS"
 
 ## Instalando pacotes .deb baixados na sessão anterior ##
