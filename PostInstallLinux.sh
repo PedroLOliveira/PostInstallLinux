@@ -3,7 +3,7 @@
 URL_WINE_KEY="https://dl.winehq.org/wine-builds/winehq.key"
 URL_PPA_WINE="https://dl.winehq.org/wine-builds/ubuntu/"
 URL_GOOGLE_CHROME="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
-URL_AZURE_DATA_STUDIO="https://go.microsoft.com/fwlink/?linkid=2113344"
+URL_AZURE_DATA_STUDIO="https://go.microsoft.com/fwlink/?linkid=2135515"
 
 DIRETORIO_DOWNLOADS="$HOME/Downloads/programas"
 FONTS_DIR="$HOME/.local/share/fonts"
@@ -25,7 +25,6 @@ PROGRAMAS_PARA_INSTALAR=(
   snapd
   guvcview
   virtualbox
-  flameshot
   steam-installer
   synaptic
   gnome-tweaks
